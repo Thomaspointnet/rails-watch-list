@@ -1,7 +1,10 @@
-<h1>See all the lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://file1.telestar.fr/var/telestar/storage/images/3/0/6/6/3066914/a-florent.jpg?alias=exact1024x768_l&size=x100&format=webp);">
+    <h1>T'en veux du Bookmark?!</strong>!</h1>
+    <p>Et bien on va t'en donner.</p>
+</div>
+
 <ul>
   <% @lists.each do |list| %>
     <li><%= list.name %> - <%= link_to "See list details", list_path(list) %></li>
   <% end %>
 </ul>
-<h4> <%= link_to "Create a new list", new_list_path %> </h4>
