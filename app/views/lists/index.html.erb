@@ -2,9 +2,11 @@
     <h1>T'en veux du Bookmark?!</strong>!</h1>
     <p>Et bien on va t'en donner.</p>
 </div>
-
-<ul>
+<div class="container">
+    <div class="cards">
   <% @lists.each do |list| %>
-    <li><%= list.name %> - <%= link_to "See list details", list_path(list) %></li>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://remeng.rosselcdn.net/sites/default/files/dpistyles_v2/ena_16_9_extra_big/2019/12/31/node_120077/11502377/public/2019/12/31/B9722089567Z.1_20191231182958_000%2BG8GF77IAU.1-0.png.jpg?itok=bgnGmXoE1577875397)">
+    <%= link_to "#{list.name}", list_path(list), class: "btn btn-gradient" %>
+  </div>
   <% end %>
-</ul>
+</div>

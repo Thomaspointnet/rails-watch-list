@@ -4,9 +4,10 @@ class ListsController < ApplicationController
   end
 
   def show
-    id = params[:id]
-    @list = List.find(id)
-    @bookmarks = Bookmark.where(id == :list_id)
+    @id = params[:id]
+    @list = List.find(@id)
+    @movies = @list.movies
+    @bookmarks = Bookmark.where(@id == :list_id)
   end
 
   def new
